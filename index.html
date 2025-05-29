@@ -13,18 +13,17 @@
       line-height: 1.5;
     }
     header {
-      background: linear-gradient(to right, #ff7043, #ffb74d);
+      background: #edaf12;
       padding: 30px 20px;
       text-align: center;
     }
     header h1 {
       font-size: 48px;
-      color: white;
+      color: #001e5b;
       margin: 0;
       font-family: 'Georgia', serif;
     }
 
-    /* Ny info-box styling */
     .info-box {
       max-width: 600px;
       margin: 20px auto;
@@ -41,7 +40,6 @@
       letter-spacing: 0.02em;
     }
 
-    /* Lunch-box */
     .lunch-box {
       max-width: 400px;
       margin: 30px auto;
@@ -72,7 +70,6 @@
       text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
     }
 
-    /* Öppettider och kontakt */
     .contact-box {
       max-width: 600px;
       margin: 20px auto;
@@ -104,7 +101,6 @@
       color: #d84315;
     }
 
-    /* Kategori container */
     .category {
       margin: 30px auto;
       max-width: 900px;
@@ -132,7 +128,6 @@
       position: relative;
       padding-left: 50px;
     }
-    /* Emoji före kategori */
     .category h2::before {
       content: attr(data-emoji);
       font-size: 36px;
@@ -141,7 +136,6 @@
       top: 50%;
       transform: translateY(-50%);
     }
-    /* Prisruta */
     .price {
       background: #ffd54f;
       display: inline-block;
@@ -154,7 +148,6 @@
       margin-bottom: 20px;
       user-select: text;
     }
-    /* Lista */
     ul.pizza-list {
       list-style: none;
       padding: 0;
@@ -170,22 +163,19 @@
       display: flex;
       align-items: center;
       gap: 15px;
-      transition: background-color 0.2s ease;
+      flex-wrap: wrap;
     }
     ul.pizza-list li:hover {
       background: #ffecb3;
     }
-    /* Emoji vid varje rätt */
     .pizza-emoji {
       font-size: 28px;
       flex-shrink: 0;
     }
-    /* Rätt namn */
     ul.pizza-list strong {
       flex-grow: 1;
       color: #7f4f00;
     }
-    /* Ingredienser - kursiv */
     ul.pizza-list li em {
       font-style: italic;
       font-weight: 600;
@@ -193,7 +183,7 @@
       margin-left: 12px;
       font-size: 18px;
     }
-    /* Responsivitet */
+
     @media (max-width: 600px) {
       header h1 {
         font-size: 32px;
@@ -206,7 +196,13 @@
         padding-left: 40px;
       }
       .price {
-        font-size: 18px;
+        font-size: 16px;
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        padding: 10px;
+        box-sizing: border-box;
       }
       ul.pizza-list li {
         font-size: 18px;
@@ -236,12 +232,11 @@
   <div class="lunch-box" id="lunch-box">
     <h2>🍽️ Dagens Lunch <span id="lunch-price">119 kr</span></h2>
     <p><strong>Måndag - Fredag</strong><br />11:30 - 13:30</p>
-    <p>🥗 Sallad &nbsp; | &nbsp; 🥤 Dricka &nbsp; | &nbsp;</p>
+    <p>🥗 Sallad &nbsp; | &nbsp; 🥤 Dricka &nbsp; |</p>
   </div>
 
   <div id="menu"></div>
 
-  <!-- Flyttade info-box och kontakt längst ner -->
   <div class="info-box" role="note" aria-label="Viktig information">
     🍕 Barnpizzor är 10 kr mindre än ordinarie pris.<br />
     🕌 Kebabkött finns som halal.
@@ -259,20 +254,10 @@
   </section>
 
   <script>
-    // Emoji per kategori
     const categoryEmojis = {
-      "pizza": "🍕",
-      "sallad": "🥗",
-      "dryck": "🥤",
-      "dricka": "🥤",
-      "dessert": "🍰",
-      "förrätt": "🥟",
-      "pasta": "🍝",
-      "burgare": "🍔",
-      "hamburgare": "🍔",
-      "soppa": "🍲",
-      "rulle": "🌯",
-      "wrap": "🌯"
+      "pizza": "🍕", "sallad": "🥗", "dryck": "🥤", "dricka": "🥤",
+      "dessert": "🍰", "förrätt": "🥟", "pasta": "🍝", "burgare": "🍔",
+      "hamburgare": "🍔", "soppa": "🍲", "rulle": "🌯", "wrap": "🌯"
     };
 
     function getEmojiForCategory(cat) {
@@ -307,7 +292,6 @@
         const lunchPriceSpan = document.getElementById("lunch-price");
 
         menuContainer.innerHTML = '';
-
         let lunchPriceFromSheet = null;
         const pizzaGroups = {};
         const otherCategories = {};
@@ -356,7 +340,7 @@
           html += `<ul class="pizza-list">`;
 
           group.items.forEach(pizza => {
-            html += `<li><span class="pizza-emoji">🍕</span><strong>${pizza.name}</strong> – <em>${pizza.ingredients}</em></li>`;
+            html += `<li><span class="pizza-emoji">🍕</span><strong>${pizza.name}</strong><em>${pizza.ingredients}</em></li>`;
           });
 
           html += `</ul>`;
@@ -374,7 +358,7 @@
 
           items.forEach(item => {
             const emoji = getEmojiForDish(item.name, item.category);
-            html += `<li><span class="pizza-emoji">${emoji}</span><strong>${item.name}</strong> – <em>${item.ingredients}</em> <em>(${item.pricePizza} kr)</em></li>`;
+            html += `<li><span class="pizza-emoji">${emoji}</span><strong>${item.name}</strong><em>${item.ingredients}</em> <em>(${item.pricePizza} kr)</em></li>`;
           });
 
           html += `</ul>`;
