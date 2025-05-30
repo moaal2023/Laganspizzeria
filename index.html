@@ -24,93 +24,65 @@
       font-family: 'Georgia', serif;
     }
 
-    .info-box {
-      max-width: 600px;
+    .info-box, .contact-box, .lunch-box, .category {
       margin: 20px auto;
+      max-width: 600px;
+      border-radius: 14px;
+    }
+
+    .info-box {
       background: #fff3e0;
       border-left: 6px solid #ff7043;
       padding: 15px 25px;
-      border-radius: 12px;
       box-shadow: 0 4px 12px rgba(255, 112, 67, 0.3);
       font-weight: 600;
       color: #7a3a00;
       text-align: center;
-      user-select: none;
       font-size: 18px;
       letter-spacing: 0.02em;
     }
 
     .lunch-box {
-      max-width: 400px;
-      margin: 30px auto;
       background: linear-gradient(135deg, #ffb347, #ffcc33);
-      border-radius: 16px;
       box-shadow: 0 8px 20px rgba(255, 179, 71, 0.5);
       color: #4b2e00;
       padding: 25px 30px;
       text-align: center;
-      user-select: none;
     }
     .lunch-box h2 {
       font-size: 28px;
       margin-bottom: 10px;
       font-weight: 700;
-      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
     }
-    .lunch-box h2 span {
-      font-weight: 900;
-      font-size: 32px;
-      color: #5a3700;
+    .lunch-box p {
+      font-size: 20px;
+      font-weight: 700;
+      margin: 0;
     }
-    .lunch-box .lunch-price {
-  font-size: 26px;
-  font-weight: 700;
-  margin-top: 6px;
-  color: #5a3700;
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
-}
 
     .contact-box {
-      max-width: 600px;
-      margin: 20px auto;
       background: #fff8e1;
       border-left: 6px solid #ffb74d;
       padding: 20px 30px;
-      border-radius: 14px;
       box-shadow: 0 6px 15px rgba(255, 179, 71, 0.4);
       color: #7a4a00;
-      font-weight: 600;
-      letter-spacing: 0.02em;
-      text-align: center;
-      user-select: none;
       font-size: 18px;
-      line-height: 1.6;
+      text-align: center;
     }
+
     .contact-box h2 {
       font-size: 28px;
-      margin-bottom: 12px;
       color: #bf360c;
-      text-shadow: 1px 1px 2px #fcd49a;
       font-weight: 800;
-      font-family: 'Georgia', serif;
-    }
-    .contact-box p {
-      margin: 6px 0;
-    }
-    .contact-box strong {
-      color: #d84315;
+      margin: 10px 0;
     }
 
     .category {
-      margin: 30px auto;
-      max-width: 900px;
       background: linear-gradient(135deg, #fff8e1, #ffe0b2);
-      border-radius: 16px;
       box-shadow: 0 10px 25px rgba(255, 179, 71, 0.3);
       padding: 25px 30px;
       color: #5d3400;
-      user-select: none;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: 0.3s ease;
     }
     .category:hover {
       transform: translateY(-5px);
@@ -118,13 +90,10 @@
     }
     .category h2 {
       font-size: 30px;
-      font-weight: 800;
-      margin-bottom: 15px;
       display: flex;
       align-items: center;
       gap: 12px;
       color: #bf360c;
-      text-shadow: 1px 1px 2px #fcd49a;
       position: relative;
       padding-left: 50px;
     }
@@ -136,6 +105,7 @@
       top: 50%;
       transform: translateY(-50%);
     }
+
     .price {
       background: #ffd54f;
       display: inline-block;
@@ -145,14 +115,14 @@
       font-size: 20px;
       color: #5d3400;
       box-shadow: inset 0 2px 5px rgba(255, 255, 255, 0.6);
-      margin-bottom: 20px;
-      user-select: text;
+      margin: 10px 0 20px;
     }
+
     ul.pizza-list {
       list-style: none;
       padding: 0;
-      margin: 0;
     }
+
     ul.pizza-list li {
       font-size: 20px;
       margin: 10px 0;
@@ -161,26 +131,22 @@
       background: #fff3e0;
       box-shadow: 0 4px 10px rgba(255, 179, 71, 0.15);
       display: flex;
-      align-items: center;
-      gap: 15px;
       flex-wrap: wrap;
+      gap: 12px;
     }
-    ul.pizza-list li:hover {
-      background: #ffecb3;
-    }
+
     .pizza-emoji {
-      font-size: 28px;
-      flex-shrink: 0;
+      font-size: 26px;
     }
+
     ul.pizza-list strong {
-      flex-grow: 1;
       color: #7f4f00;
     }
+
     ul.pizza-list li em {
       font-style: italic;
       font-weight: 600;
       color: #a65c00;
-      margin-left: 12px;
       font-size: 18px;
     }
 
@@ -188,38 +154,11 @@
       header h1 {
         font-size: 32px;
       }
-      .category {
-        padding: 15px 20px;
-      }
-      .category h2 {
-        font-size: 24px;
-        padding-left: 40px;
-      }
       .price {
-        font-size: 16px;
-        width: 100%;
-        display: block;
-        text-align: center;
-        margin-top: 10px;
-        padding: 10px;
-        box-sizing: border-box;
+        font-size: 18px;
       }
       ul.pizza-list li {
         font-size: 18px;
-        padding: 10px 12px;
-      }
-      .pizza-emoji {
-        font-size: 24px;
-      }
-      .info-box {
-        max-width: 90%;
-        font-size: 16px;
-        padding: 12px 18px;
-      }
-      .contact-box {
-        max-width: 90%;
-        font-size: 16px;
-        padding: 15px 20px;
       }
     }
   </style>
@@ -231,19 +170,19 @@
 
   <div class="lunch-box" id="lunch-box">
     <h2>🍽️ Dagens Lunch</h2>
-<div class="lunch-price" id="lunch-price">119 kr</div>
+    <p id="lunch-price">119 kr</p>
     <p><strong>Måndag - Fredag</strong><br />11:30 - 13:30</p>
-    <p>🥗 Sallad &nbsp; | &nbsp; 🥤 Dricka &nbsp; |</p>
+    <p>🥗 Sallad &nbsp; | &nbsp; 🥤 Dricka</p>
   </div>
 
   <div id="menu"></div>
 
-  <div class="info-box" role="note" aria-label="Viktig information">
+  <div class="info-box">
     🍕 Barnpizzor är 10 kr mindre än ordinarie pris.<br />
     🕌 Kebabkött finns som halal.
   </div>
 
-  <section class="contact-box" role="contentinfo" aria-label="Öppettider och kontaktinformation">
+  <section class="contact-box">
     <h2>📅 Öppettider</h2>
     <p><strong>Måndag - Fredag:</strong> 11:30 - 20:00</p>
     <p><strong>Lördag:</strong> 12:00 - 21:00</p>
@@ -256,28 +195,30 @@
 
   <script>
     const categoryEmojis = {
-      "pizza": "🍕", "sallad": "🥗", "dryck": "🥤", "dricka": "🥤",
-      "dessert": "🍰", "förrätt": "🥟", "pasta": "🍝", "burgare": "🍔",
-      "hamburgare": "🍔", "soppa": "🍲", "rulle": "🌯", "wrap": "🌯"
+      "pizza": "🍕",
+      "sallad": "🥗",
+      "dryck": "🥤",
+      "dricka": "🥤",
+      "dessert": "🍰",
+      "förrätt": "🥟",
+      "pasta": "🍝",
+      "burgare": "🍔",
+      "hamburgare": "🍔",
+      "soppa": "🍲",
+      "rulle": "🌯",
+      "wrap": "🌯"
     };
 
+    const sheetUrl = 'https://docs.google.com/spreadsheets/d/1gh97sQ2uo4qi3xY_iLsTqNmw45INlz1NmvAy-RvFOyA/edit';
+    const gid = '1997480208';
+
     function getEmojiForCategory(cat) {
-      cat = cat.toLowerCase();
+      const lower = cat.toLowerCase();
       for (const key in categoryEmojis) {
-        if (cat.includes(key)) return categoryEmojis[key];
+        if (lower.includes(key)) return categoryEmojis[key];
       }
       return "🍽️";
     }
-
-    function getEmojiForDish(name, category) {
-      const lower = name.toLowerCase();
-      if (lower.includes("hamburgare") || lower.includes("burger")) return "🍔";
-      if (lower.includes("rulle") || lower.includes("wrap")) return "🌯";
-      return getEmojiForCategory(category);
-    }
-
-    const sheetUrl = 'https://docs.google.com/spreadsheets/d/18Pnw18jKK5cMUEgA8vT1hDIk718tESt1-a-ZOyWfxuo/edit';
-    const gid = '0';
 
     async function fetchMenu() {
       const sheetID = sheetUrl.match(/spreadsheets\/d\/(.*?)(\/|$)/)[1];
@@ -285,40 +226,35 @@
 
       try {
         const res = await fetch(url);
-        if (!res.ok) throw new Error(`HTTP-fel: ${res.status}`);
         const text = await res.text();
         const json = JSON.parse(text.substr(47).slice(0, -2));
         const rows = json.table.rows;
-        const menuContainer = document.getElementById("menu");
-        const lunchPriceSpan = document.getElementById("lunch-price");
+        const menu = document.getElementById("menu");
+        const lunchPriceEl = document.getElementById("lunch-price");
 
-        menuContainer.innerHTML = '';
-        let lunchPriceFromSheet = null;
+        menu.innerHTML = "";
+        const pizzaCategories = ["pizza", "kebabpizza", "specialpizza", "mexikansk pizza"];
         const pizzaGroups = {};
         const otherCategories = {};
+        let lunchPrice = null;
 
         rows.forEach(row => {
           const cat = row.c[0]?.v || "";
           const name = row.c[3]?.v || "";
           const ingredients = row.c[4]?.v || "";
-          let pricePizza = row.c[5]?.v || "";
-          let priceFamily = row.c[6]?.v || "";
+          const pricePizza = row.c[5]?.v || "";
+          const priceFamily = row.c[6]?.v || "";
 
           if (cat.toLowerCase() === "lunch" && pricePizza) {
-            lunchPriceFromSheet = pricePizza;
+            lunchPrice = pricePizza;
             return;
           }
 
           if (!name || !ingredients || !pricePizza) return;
 
-          if (name.toLowerCase() === "ciao ciao") {
-            pricePizza = "130";
-            priceFamily = "340";
-          }
-
-          if (cat.toLowerCase() === "pizza") {
-            const key = `${pricePizza}-${priceFamily}`;
-            if (!pizzaGroups[key]) pizzaGroups[key] = { pricePizza, priceFamily, items: [] };
+          if (pizzaCategories.includes(cat.toLowerCase())) {
+            const key = `${cat}|${pricePizza}|${priceFamily}`;
+            if (!pizzaGroups[key]) pizzaGroups[key] = { cat, pricePizza, priceFamily, items: [] };
             pizzaGroups[key].items.push({ name, ingredients });
           } else {
             if (!otherCategories[cat]) otherCategories[cat] = [];
@@ -326,54 +262,36 @@
           }
         });
 
-        if (lunchPriceFromSheet !== null) {
-          lunchPriceSpan.textContent = `${lunchPriceFromSheet} kr`;
-        }
+        if (lunchPrice) lunchPriceEl.textContent = `${lunchPrice} kr`;
 
-        const sortedGroups = Object.values(pizzaGroups).sort((a, b) => a.pricePizza - b.pricePizza);
-        sortedGroups.forEach(group => {
-          const block = document.createElement('div');
-          block.className = 'category';
-          block.setAttribute('data-emoji', categoryEmojis["pizza"]);
-
-          let html = `<h2>Pizza</h2>`;
-          html += `<div class="price">Pizza: ${group.pricePizza} kr | Familjepizza: ${group.priceFamily} kr</div>`;
-          html += `<ul class="pizza-list">`;
-
+        for (const group of Object.values(pizzaGroups)) {
+          const block = document.createElement("div");
+          block.className = "category";
+          block.setAttribute("data-emoji", getEmojiForCategory(group.cat));
+          let html = `<h2>${group.cat}</h2>`;
+          html += `<div class="price">Pizza: ${group.pricePizza} kr | Familjepizza: ${group.priceFamily} kr</div><ul class="pizza-list">`;
           group.items.forEach(pizza => {
-            html += `<li><span class="pizza-emoji">🍕</span><strong>${pizza.name}</strong><em>${pizza.ingredients}</em></li>`;
+            html += `<li><span class="pizza-emoji">🍕</span><strong>${pizza.name}</strong> <em>${pizza.ingredients}</em></li>`;
           });
-
           html += `</ul>`;
           block.innerHTML = html;
-          menuContainer.appendChild(block);
-        });
+          menu.appendChild(block);
+        }
 
         for (const [cat, items] of Object.entries(otherCategories)) {
-          const block = document.createElement('div');
-          block.className = 'category';
-          block.setAttribute('data-emoji', getEmojiForCategory(cat));
-
-          let html = `<h2>${cat}</h2>`;
-          html += `<ul class="pizza-list">`;
-
+          const block = document.createElement("div");
+          block.className = "category";
+          block.setAttribute("data-emoji", getEmojiForCategory(cat));
+          let html = `<h2>${cat}</h2><ul class="pizza-list">`;
           items.forEach(item => {
-            const emoji = getEmojiForDish(item.name, item.category);
-            html += `<li><span class="pizza-emoji">${emoji}</span><strong>${item.name}</strong><em>${item.ingredients}</em> <em>(${item.pricePizza} kr)</em></li>`;
+            html += `<li><span class="pizza-emoji">🍽️</span><strong>${item.name}</strong> <em>${item.ingredients}</em> <em>(${item.pricePizza} kr)</em></li>`;
           });
-
           html += `</ul>`;
           block.innerHTML = html;
-          menuContainer.appendChild(block);
+          menu.appendChild(block);
         }
-      } catch (error) {
-        console.error('Fel vid hämtning av meny:', error);
-        document.getElementById("menu").innerHTML = `
-          <p style="color:#b71c1c; text-align:center; margin-top: 40px;">
-            Misslyckades att hämta menyn.<br>
-            Kontrollera att Google Sheets-länken är korrekt.<br>
-            <em>${error.message}</em>
-          </p>`;
+      } catch (e) {
+        document.getElementById("menu").innerHTML = `<p style="text-align:center;color:red;">Kunde inte hämta menyn.<br>${e.message}</p>`;
       }
     }
 
